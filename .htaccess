@@ -1,0 +1,284 @@
+# ######################################################################
+# # ERRORS                                                             #
+# ######################################################################
+
+# ----------------------------------------------------------------------
+# | Custom error messages/pages                                        |
+# ----------------------------------------------------------------------
+
+ErrorDocument 404 /404.html
+
+# ######################################################################
+# # MEDIA TYPES AND CHARACTER ENCODINGS                                #
+# ######################################################################
+
+# ----------------------------------------------------------------------
+# | Character encodings                                                |
+# ----------------------------------------------------------------------
+
+AddDefaultCharset utf-8
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+<IfModule mod_mime.c>
+    AddCharset utf-8 .atom \
+                     .bbaw \
+                     .css \
+                     .geojson \
+                     .ics \
+                     .js \
+                     .json \
+                     .jsonld \
+                     .manifest \
+                     .markdown \
+                     .md \
+                     .mjs \
+                     .rdf \
+                     .rss \
+                     .topojson \
+                     .vtt \
+                     .webapp \
+                     .webmanifest \
+                     .xloc \
+                     .xml
+</IfModule>
+
+# ######################################################################
+# # REWRITES                                                           #
+# ######################################################################
+
+# ----------------------------------------------------------------------
+# | Forcing `https://` and the `www.` at the beginning of URLs         |
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+
+    RewriteEngine on
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+</IfModule>
+
+# ######################################################################
+# # SECURITY                                                           #
+# ######################################################################
+
+# ----------------------------------------------------------------------
+# | Clickjacking                                                       |
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+
+    Header set X-Frame-Options "DENY"
+
+    <FilesMatch "\.(appcache|atom|bbaw|bmp|br|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|gz|htc|ic[os]|jpe?g|m?js|json(ld)?|m4[av]|manifest|map|markdown|md|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|wasm|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+        Header unset X-Frame-Options
+    </FilesMatch>
+
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Content Security Policy (CSP)                                      |
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+
+    Header set Content-Security-Policy "default-src 'self' ; script-src 'self' websupport.sk www.websupport.sk www.googletagmanager.com www.google-analytics.com code.jquery.com cdnjs.cloudflare.com/ajax/libs/popper.js/ stackpath.bootstrapcdn.com cdnjs.cloudflare.com/ajax/libs/cookieconsent2/; style-src 'self' 'unsafe-inline' websupport.sk www.websupport.sk stackpath.bootstrapcdn.com cdnjs.cloudflare.com/ajax/libs/cookieconsent2/ use.fontawesome.com fonts.googleapis.com; img-src 'self' websupport.sk www.websupport.sk www.google-analytics.com; font-src 'self' data: www.websupport.sk use.fontawesome.com fonts.gstatic.com; form-action 'self' ; upgrade-insecure-requests; block-all-mixed-content; report-uri https://connet.report-uri.com/r/d/csp/enforce"
+
+    <FilesMatch "\.(appcache|atom|bbaw|bmp|br|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|gz|htc|ic[os]|jpe?g|m?js|json(ld)?|m4[av]|manifest|map|markdown|md|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|wasm|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+        Header unset Content-Security-Policy
+    </FilesMatch>
+
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | HTTP Strict Transport Security (HSTS)                              |
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+
+    Header unset Strict-Transport-Security
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=https
+#    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=https
+
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Reducing MIME type security risks                                  |
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+
+    Header set X-Content-Type-Options "nosniff"
+
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Reflected Cross-Site Scripting (XSS) attacks                       |
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+
+    Header set X-XSS-Protection "1; mode=block; report=https://connet.report-uri.com/r/d/xss/enforce"
+
+    <FilesMatch "\.(appcache|atom|bbaw|bmp|br|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|gz|htc|ic[os]|jpe?g|m?js|json(ld)?|m4[av]|manifest|map|markdown|md|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|wasm|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+        Header unset X-XSS-Protection
+    </FilesMatch>
+
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Referrer Policy                                                    |
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+#    Header set Referrer-Policy "no-referrer-when-downgrade"
+
+    <FilesMatch "\.(appcache|atom|bbaw|bmp|br|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|gz|htc|ic[os]|jpe?g|m?js|json(ld)?|m4[av]|manifest|map|markdown|md|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|wasm|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+        Header unset Referrer-Policy
+    </FilesMatch>
+
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Expect-CT (Certificate Transparency)                               |
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+
+    Header set Expect-CT "max-age=0, report-uri=\"https://connet.report-uri.com/r/d/ct/reportOnly\""
+#    Header set Expect-CT "enforce, max-age=30, report-uri=\"https://connet.report-uri.com/r/d/ct/enforce"\"
+
+
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Feature Policy                                                     |
+# ----------------------------------------------------------------------
+
+# https://github.com/WICG/feature-policy/blob/master/features.md
+
+<IfModule mod_headers.c>
+
+    Header set Feature-Policy "accelerometer 'self'; ambient-light-sensor 'self'; autoplay 'self'; camera 'self'; encrypted-media 'self'; fullscreen 'self'; geolocation 'self'; gyroscope  'self'; magnetometer 'self'; microphone 'self'; midi 'self'; payment 'self'; picture-in-picture 'self'; speaker 'self'; usb 'self'; vibrate 'self'; vr 'self'"
+
+</IfModule>
+
+# ######################################################################
+# # WEB PERFORMANCE                                                    #
+# ######################################################################
+
+# ----------------------------------------------------------------------
+# | Cache expiration                                                   |
+# ----------------------------------------------------------------------
+
+<IfModule mod_expires.c>
+
+    ExpiresActive on
+    ExpiresDefault                                      "access plus 1 month"
+
+  # CSS
+
+    ExpiresByType text/css                              "access plus 1 year"
+
+
+  # Data interchange
+
+    ExpiresByType application/atom+xml                  "access plus 1 hour"
+    ExpiresByType application/rdf+xml                   "access plus 1 hour"
+    ExpiresByType application/rss+xml                   "access plus 1 hour"
+
+    ExpiresByType application/json                      "access plus 0 seconds"
+    ExpiresByType application/ld+json                   "access plus 0 seconds"
+    ExpiresByType application/schema+json               "access plus 0 seconds"
+    ExpiresByType application/vnd.geo+json              "access plus 0 seconds"
+    ExpiresByType application/xml                       "access plus 0 seconds"
+    ExpiresByType text/calendar                         "access plus 0 seconds"
+    ExpiresByType text/xml                              "access plus 0 seconds"
+
+
+  # Favicon (cannot be renamed!) and cursor images
+
+    ExpiresByType image/vnd.microsoft.icon              "access plus 1 week"
+    ExpiresByType image/x-icon                          "access plus 1 week"
+
+  # HTML
+
+    ExpiresByType text/html                             "access plus 0 seconds"
+
+
+  # JavaScript
+
+    ExpiresByType application/javascript                "access plus 1 year"
+    ExpiresByType application/x-javascript              "access plus 1 year"
+    ExpiresByType text/javascript                       "access plus 1 year"
+
+
+  # Manifest files
+
+    ExpiresByType application/manifest+json             "access plus 1 week"
+    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+
+
+  # Markdown
+
+    ExpiresByType text/markdown                         "access plus 0 seconds"
+
+
+  # Media files
+
+    ExpiresByType audio/ogg                             "access plus 1 month"
+    ExpiresByType image/bmp                             "access plus 1 month"
+    ExpiresByType image/gif                             "access plus 1 month"
+    ExpiresByType image/jpeg                            "access plus 1 month"
+    ExpiresByType image/png                             "access plus 1 month"
+    ExpiresByType image/svg+xml                         "access plus 1 month"
+    ExpiresByType image/webp                            "access plus 1 month"
+    ExpiresByType video/mp4                             "access plus 1 month"
+    ExpiresByType video/ogg                             "access plus 1 month"
+    ExpiresByType video/webm                            "access plus 1 month"
+
+
+  # WebAssembly
+
+    ExpiresByType application/wasm                      "access plus 1 year"
+
+
+  # Web fonts
+
+    # Collection
+    ExpiresByType font/collection                       "access plus 1 month"
+
+    # Embedded OpenType (EOT)
+    ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
+    ExpiresByType font/eot                              "access plus 1 month"
+
+    # OpenType
+    ExpiresByType font/opentype                         "access plus 1 month"
+    ExpiresByType font/otf                              "access plus 1 month"
+
+    # TrueType
+    ExpiresByType application/x-font-ttf                "access plus 1 month"
+    ExpiresByType font/ttf                              "access plus 1 month"
+
+    # Web Open Font Format (WOFF) 1.0
+    ExpiresByType application/font-woff                 "access plus 1 month"
+    ExpiresByType application/x-font-woff               "access plus 1 month"
+    ExpiresByType font/woff                             "access plus 1 month"
+
+    # Web Open Font Format (WOFF) 2.0
+    ExpiresByType application/font-woff2                "access plus 1 month"
+    ExpiresByType font/woff2                            "access plus 1 month"
+
+
+  # Other
+
+    ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
+
+</IfModule>

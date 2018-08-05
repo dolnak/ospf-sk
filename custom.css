@@ -1,0 +1,58 @@
+html {
+  font-size: 1rem;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+
+/*
+  PANTONE Orange 021 C
+  RGB 254 80 0
+  HEX/HTML FE5000
+  CMYK 0 65 100 0
+*/
+
+.bg-color {
+  background-color: #fe5000;
+}
+
+.bg-image {
+  background-image: url("https://www.ospf.sk/img/background-4k-300dpi.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+/* TODO: REMOVE? NOT USED */
+.full-height {
+  min-height: 93vh;
+}
+
+.full-height-mb-zero {
+  min-height: 93vh;
+  margin-bottom: 0;
+}
+
+.half-height {
+  min-height: 46.5vh;
+}
+
+.half-height-mb-zero {
+  min-height: 46.5vh;
+  margin-bottom: 0;
+}
