@@ -86,7 +86,9 @@ AddDefaultCharset utf-8
 
 <IfModule mod_headers.c>
 
-    Header set Content-Security-Policy "default-src 'self' ; script-src 'self' websupport.sk www.websupport.sk www.googletagmanager.com www.google-analytics.com code.jquery.com cdnjs.cloudflare.com/ajax/libs/popper.js/ stackpath.bootstrapcdn.com cdnjs.cloudflare.com/ajax/libs/cookieconsent2/; style-src 'self' 'unsafe-inline' websupport.sk www.websupport.sk stackpath.bootstrapcdn.com cdnjs.cloudflare.com/ajax/libs/cookieconsent2/ use.fontawesome.com fonts.googleapis.com; img-src 'self' websupport.sk www.websupport.sk www.google-analytics.com; font-src 'self' data: www.websupport.sk use.fontawesome.com fonts.gstatic.com; form-action 'self' ; upgrade-insecure-requests; block-all-mixed-content; report-uri https://connet.report-uri.com/r/d/csp/enforce"
+    Header set Content-Security-Policy "default-src 'self' ; script-src 'self' www.googletagmanager.com www.google-analytics.com code.jquery.com cdnjs.cloudflare.com/ajax/libs/popper.js/ stackpath.bootstrapcdn.com cdnjs.cloudflare.com/ajax/libs/cookieconsent2/; style-src 'self' 'unsafe-inline' stackpath.bootstrapcdn.com cdnjs.cloudflare.com/ajax/libs/cookieconsent2/ use.fontawesome.com fonts.googleapis.com; img-src 'self' www.google-analytics.com; font-src 'self' data: use.fontawesome.com fonts.gstatic.com; object-src 'none' ; form-action 'self' ; upgrade-insecure-requests; block-all-mixed-content; report-uri https://connet.report-uri.com/r/d/csp/enforce"
+
+#    Header set Content-Security-Policy "default-src 'self' ; script-src 'self' websupport.sk www.websupport.sk www.googletagmanager.com www.google-analytics.com code.jquery.com cdnjs.cloudflare.com/ajax/libs/popper.js/ stackpath.bootstrapcdn.com cdnjs.cloudflare.com/ajax/libs/cookieconsent2/; style-src 'self' 'unsafe-inline' websupport.sk www.websupport.sk stackpath.bootstrapcdn.com cdnjs.cloudflare.com/ajax/libs/cookieconsent2/ use.fontawesome.com fonts.googleapis.com; img-src 'self' websupport.sk www.websupport.sk www.google-analytics.com; font-src 'self' data: www.websupport.sk use.fontawesome.com fonts.gstatic.com; object-src 'none' ; form-action 'self' ; upgrade-insecure-requests; block-all-mixed-content; report-uri https://connet.report-uri.com/r/d/csp/enforce"
 
     <FilesMatch "\.(appcache|atom|bbaw|bmp|br|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|gz|htc|ic[os]|jpe?g|m?js|json(ld)?|m4[av]|manifest|map|markdown|md|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|wasm|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
         Header unset Content-Security-Policy
@@ -101,8 +103,8 @@ AddDefaultCharset utf-8
 <IfModule mod_headers.c>
 
     Header unset Strict-Transport-Security
-    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=https
-#    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=https
+#    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=https
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=https
 
 </IfModule>
 
@@ -136,7 +138,7 @@ AddDefaultCharset utf-8
 
 <IfModule mod_headers.c>
 
-    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Referrer-Policy "no-referrer, strict-origin-when-cross-origin"
 #    Header set Referrer-Policy "no-referrer-when-downgrade"
 
     <FilesMatch "\.(appcache|atom|bbaw|bmp|br|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|gz|htc|ic[os]|jpe?g|m?js|json(ld)?|m4[av]|manifest|map|markdown|md|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|wasm|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
