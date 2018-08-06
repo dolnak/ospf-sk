@@ -59,9 +59,6 @@ $content = <<<MAIN
       <i class="far fa-file-pdf"></i>
       <a href="/rfc/rfc5340.pdf">RFC 5340: OSPF for IPv6</a> (94 strán)
     </p>
-    <p class="text-justify">
-      Všetky vyššie uvedené dokumenty sú dostupné aj na adrese <a href="/rfc/">https://www.ospf.sk/rfc/</a>
-    </p>
   </div>
 </div>
 
