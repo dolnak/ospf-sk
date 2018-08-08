@@ -7,6 +7,8 @@ $description = 'Hľadáte informácie o protokole Open Shortest Path First (OSPF
 $h1 = 'Open Shortest Path First';
 $p_lead = 'Protokol OSPF po slovensky? Získajte komplexné znalosti o dynamickom smerovaní IP paketov. Tieto stránky sú platformou určenou všetkým so záujmom o dynamické smerovanie IP paketov a najmä protokol OSPF.';
 
+$pdf_icon = '<i class="far fa-file-pdf"></i>';
+
 $content = <<<MAIN
 
 <div class="jumbotron jumbotron-fluid bg-light bg-image border-bottom full-height-mb-zero">
@@ -40,25 +42,154 @@ $content = <<<MAIN
     </div>
   </div>
 </div>
-
-<div id="dokumenty-rfc" class="jumbotron jumbotron-fluid bg-white border-bottom half-height">
+<div id="dokumenty-rfc" class="jumbotron jumbotron-fluid bg-white full-height">
   <div class="container">
     <h2 class="display-4">Dokumenty RFC</h2>
     <p class="text-justify">
-      Nasledujúci, priebežne aktualizovaný, zoznam dokumentov RFC popisuje funkcie OSPF protokolu. Zoznam zatiaľ nie je žiadnym spôsobom usporiadaný, a už vôbec nie kompletný.
+      Nasledujúci <a href="/rfc/">zoznam dokumentov RFC popisujúcich OSPF protokol</a>. Tento zoznam nie je úplný a&nbsp;je priebežne dopĺňaný a&nbsp;aktualizovaný.
     </p>
-    <p class="text-justify">
-      <i class="far fa-file-pdf"></i>
-      <a href="/rfc/rfc1131.pdf">RFC 1131: The OSPF Specification</a> (107 strán)<br>
-      <i class="far fa-file-pdf"></i>
-      <a href="/rfc/rfc1245.pdf">RFC 1245: OSPF protocol analysis</a> (15 strán)<br>
-      <i class="far fa-file-pdf"></i>
-      <a href="/rfc/rfc1246.pdf">RFC 1246: Experience with the OSPF protocol</a> (38 strán)<br><br>
-      <i class="far fa-file-pdf"></i>
-      <a href="/rfc/rfc2328.pdf">RFC 2328: OSPF Version 2</a> (244 strán)<br>
-      <i class="far fa-file-pdf"></i>
-      <a href="/rfc/rfc5340.pdf">RFC 5340: OSPF for IPv6</a> (94 strán)
-    </p>
+  </div>
+  <div class="container table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Názov</th>
+          <th scope="col">Publikované</th>
+          <th scope="col">Nahrádza</th>
+          <th scope="col">Nahradený</th>
+          <th scope="col">Aktualizuje</th>
+          <th scope="col">Aktualizovaný</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1131.pdf">RFC 1131: The OSPF Specification</a>
+          </td>
+          <td>Október 1989</td>
+          <td></td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1247.pdf">RFC 1247</a>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1245.pdf">RFC 1245: OSPF protocol analysis</a>
+          </td>
+          <td>Júl 1991</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1246.pdf">RFC 1246: Experience with the OSPF protocol</a>
+          </td>
+          <td>Júl 1991</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1247.pdf">RFC 1247: OSPF Version 2</a>
+          </td>
+          <td>Júl 1991</td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1131.pdf">RFC 1131</a>
+          </td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1583.pdf">RFC 1583</a>
+          </td>
+          <td></td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1349.pdf">RFC 1349</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1248.pdf">RFC 1248: OSPF Version 2 Management Informatívny dokument Base</a>
+          </td>
+          <td>Júl 1991</td>
+          <td></td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1252.pdf">RFC 1252</a>
+          </td>
+          <td></td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1349.pdf">RFC 1349</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1252.pdf">RFC 1252: OSPF Version 2 Management Informatívny dokument Base</a>
+          </td>
+          <td>August 1991</td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1248.pdf">RFC 1248</a>
+          </td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1253.pdf">RFC 1253</a>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1253.pdf">RFC 1253: OSPF Version 2 Management Informatívny dokument Base</a>
+          </td>
+          <td>August 1991</td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1252.pdf">RFC 1252</a>
+          </td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1850.pdf">RFC 1850</a>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc2328.pdf">RFC 2328: OSPF Version 2</a>
+          </td>
+          <td>Apríl 1998</td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc2178.pdf">RFC 2178</a>
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc5709.pdf">RFC 5709</a><br>
+            $pdf_icon <a href="/rfc/rfc6549.pdf">RFC 6549</a><br>
+            $pdf_icon <a href="/rfc/rfc6845.pdf">RFC 6845</a><br>
+            $pdf_icon <a href="/rfc/rfc6860.pdf">RFC 6860</a><br>
+            $pdf_icon <a href="/rfc/rfc7474.pdf">RFC 7474</a><br>
+            $pdf_icon <a href="/rfc/rfc8042.pdf">RFC 8042</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc5340.pdf">RFC 5340: OSPF for IPv6</a>
+          </td>
+          <td>Júl 2008</td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc2740.pdf">RFC 2740</a>
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc6845.pdf">RFC 6845</a><br>
+            $pdf_icon <a href="/rfc/rfc6860.pdf">RFC 6860</a><br>
+            $pdf_icon <a href="/rfc/rfc7503.pdf">RFC 7503</a><br>
+            $pdf_icon <a href="/rfc/rfc8362.pdf">RFC 8362</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 

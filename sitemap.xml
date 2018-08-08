@@ -10,6 +10,9 @@
     <loc>https://www.ospf.sk/ochrana-sukromia/</loc>
   </url>
   <url>
+    <loc>https://www.ospf.sk/rfc/</loc>
+  </url>
+  <url>
     <loc>https://www.ospf.sk/rfc/rfc1131.pdf</loc>
   </url>
   <url>
@@ -19,12 +22,60 @@
     <loc>https://www.ospf.sk/rfc/rfc1246.pdf</loc>
   </url>
   <url>
+    <loc>https://www.ospf.sk/rfc/rfc1247.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc1248.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc1252.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc1253.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc1349.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc1583.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc1850.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc2178.pdf</loc>
+  </url>
+  <url>
     <loc>https://www.ospf.sk/rfc/rfc2328.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc2740.pdf</loc>
   </url>
   <url>
     <loc>https://www.ospf.sk/rfc/rfc5340.pdf</loc>
   </url>
   <url>
-    <loc>https://www.ospf.sk/404.html</loc>
+    <loc>https://www.ospf.sk/rfc/rfc5709.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc6549.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc6845.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc6860.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc7474.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc7503.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc8042.pdf</loc>
+  </url>
+  <url>
+    <loc>https://www.ospf.sk/rfc/rfc8362.pdf</loc>
   </url>
 </urlset>
