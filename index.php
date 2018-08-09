@@ -50,7 +50,7 @@ $content = <<<MAIN
     </p>
   </div>
   <div class="container table-responsive">
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover table-sm">
       <thead class="thead-light">
         <tr>
           <th scope="col">Názov</th>
@@ -148,6 +148,96 @@ $content = <<<MAIN
           </td>
           <td>
             $pdf_icon <a href="/rfc/rfc1850.pdf">RFC 1850</a>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1364.pdf">RFC 1364:  BGP OSPF Interaction</a>
+          </td>
+          <td>September 1992</td>
+          <td></td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1403.pdf">RFC 1403</a>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1370.pdf">RFC 1370:  Applicability Statement for OSPF</a>
+          </td>
+          <td>Október 1992</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1403.pdf">RFC 1403:  BGP OSPF Interaction</a>
+          </td>
+          <td>Január 1993</td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1364.pdf">RFC 1364</a>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1583.pdf">RFC 1583:  OSPF Version 2</a>
+          </td>
+          <td>Marec 1994</td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1247.pdf">RFC 1247</a>
+          </td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc2178.pdf">RFC 2178</a>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1584.pdf">RFC 1584:  Multicast Extensions to OSPF</a>
+          </td>
+          <td>Marec 1994</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1585.pdf">RFC 1585:  MOSPF: Analysis and Experience</a>
+          </td>
+          <td>Marec 1994</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1586.pdf">RFC 1586: Guidelines for Running OSPF Over Frame Relay Networks</a>
+          </td>
+          <td>Marec 1994</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1587.pdf">RFC 1587: The OSPF NSSA Option</a>
+          </td>
+          <td>Marec 1994</td>
+          <td></td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc3101.pdf">RFC 3101</a>
           </td>
           <td></td>
           <td></td>
