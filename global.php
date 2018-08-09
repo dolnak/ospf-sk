@@ -79,10 +79,10 @@ $content
           <p class="text-center">
             <small>
               © 2016 – $year
-              <a href="https://www.dolnak.eu">Ivan DOLNÁK</a>.
+              <a href="https://www.dolnak.eu/">Ivan DOLNÁK</a>.
               Všetky práva vyhradené.
               Prevádzkované s&nbsp;podporou
-              <a href="https://www.connet-group.sk">ConNet Group,&nbsp;s.&nbsp;r.&nbsp;o.</a><!-- ·
+              <a href="https://www.connet-group.sk/">ConNet Group,&nbsp;s.&nbsp;r.&nbsp;o.</a><!-- ·
               <a href="$base/ochrana-sukromia/">Ochrana súkromia</a><br>-->
             </small>
           </p>
