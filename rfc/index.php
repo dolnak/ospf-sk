@@ -19,7 +19,7 @@ $content = <<<MAIN
 </div>
 <div class="jumbotron jumbotron-fluid bg-white">
   <div class="container-fluid table-responsive">
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover table-sm">
       <thead class="thead-light">
         <tr>
           <th scope="col">Názov</th>
@@ -172,6 +172,146 @@ $content = <<<MAIN
         </tr>
         <tr>
           <td>
+            $pdf_icon <a href="/rfc/rfc1364.pdf">RFC 1364:  BGP OSPF Interaction</a>
+          </td>
+          <td>
+            <strong>K. Varadhan</strong> OARnet
+          </td>
+          <td>September 1992</td>
+          <td>14*</td>
+          <td></td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1403.pdf">RFC 1403</a>
+          </td>
+          <td></td>
+          <td></td>
+          <td>Navrhovaný štandard</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1370.pdf">RFC 1370:  Applicability Statement for OSPF</a>
+          </td>
+          <td>
+            <strong>Lyman Chapin</strong> Internet Architecture Board
+          </td>
+          <td>Október 1992</td>
+          <td>2*</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Historický dokument</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1403.pdf">RFC 1403:  BGP OSPF Interaction</a>
+          </td>
+          <td>
+            <strong>K. Varadhan</strong> OARnet
+          </td>
+          <td>Január 1993</td>
+          <td>17*</td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1364.pdf">RFC 1364</a>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Historický dokument</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1583.pdf">RFC 1583:  OSPF Version 2</a>
+          </td>
+          <td>
+            <strong>J. Moy</strong> Proteon, Inc.
+          </td>
+          <td>Marec 1994</td>
+          <td>216*</td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1247.pdf">RFC 1247</a>
+          </td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc2178.pdf">RFC 2178</a>
+          </td>
+          <td></td>
+          <td></td>
+          <td>Koncept štandardu</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1584.pdf">RFC 1584:  Multicast Extensions to OSPF</a>
+          </td>
+          <td>
+            <strong>J. Moy</strong> Proteon, Inc.
+          </td>
+          <td>Marec 1994</td>
+          <td>102*</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Historický dokument</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1585.pdf">RFC 1585:  MOSPF: Analysis and Experience</a>
+          </td>
+          <td>
+            <strong>J. Moy</strong> Proteon, Inc.
+          </td>
+          <td>Marec 1994</td>
+          <td>13*</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Informatívny dokument</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1586.pdf">RFC 1586: Guidelines for Running OSPF Over Frame Relay Networks</a>
+          </td>
+          <td>
+            <strong>O. deSouza</strong> AT&T Bell Laboratories<br>
+            <strong>M. Rodrigues</strong> AT&T Bell Laboratories
+          </td>
+          <td>Marec 1994</td>
+          <td>6</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Informatívny dokument</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            $pdf_icon <a href="/rfc/rfc1587.pdf">RFC 1587: The OSPF NSSA Option</a>
+          </td>
+          <td>
+            <strong>R. Coltun</strong> RainbowBridge Communications<br>
+            <strong>V. Fuller</strong> Stanford University
+          </td>
+          <td>Marec 1994</td>
+          <td>17</td>
+          <td></td>
+          <td>
+            $pdf_icon <a href="/rfc/rfc3101.pdf">RFC 3101</a>
+          </td>
+          <td></td>
+          <td></td>
+          <td>Navrhovaný štandard</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
             $pdf_icon <a href="/rfc/rfc2328.pdf">RFC 2328: OSPF Version 2</a>
           </td>
           <td>
@@ -205,7 +345,7 @@ $content = <<<MAIN
             <strong>R. Coltun</strong> Acoustra Productions<br>
             <strong>D. Ferguson</strong> Juniper Networks<br>
             <strong>J. Moy</strong> Sycamore Networks, Inc.<br>
-            <strong>A. Lindem, Ed.</strong> Redback Networks<br>
+            <strong>A. Lindem, Ed.</strong> Redback Networks
           </td>
           <td>Júl 2008</td>
           <td>94</td>
