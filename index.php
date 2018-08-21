@@ -112,7 +112,7 @@ $content = <<<MAIN
         </tr>
         <tr>
           <td>
-            $pdf_icon <a href="/rfc/rfc1248.pdf">RFC 1248: OSPF Version 2 Management Informatívny dokument Base</a>
+            $pdf_icon <a href="/rfc/rfc1248.pdf">RFC 1248: OSPF Version 2 Management Information Base</a>
           </td>
           <td>Júl 1991</td>
           <td></td>
@@ -126,7 +126,7 @@ $content = <<<MAIN
         </tr>
         <tr>
           <td>
-            $pdf_icon <a href="/rfc/rfc1252.pdf">RFC 1252: OSPF Version 2 Management Informatívny dokument Base</a>
+            $pdf_icon <a href="/rfc/rfc1252.pdf">RFC 1252: OSPF Version 2 Management Information Base</a>
           </td>
           <td>August 1991</td>
           <td>
@@ -140,7 +140,7 @@ $content = <<<MAIN
         </tr>
         <tr>
           <td>
-            $pdf_icon <a href="/rfc/rfc1253.pdf">RFC 1253: OSPF Version 2 Management Informatívny dokument Base</a>
+            $pdf_icon <a href="/rfc/rfc1253.pdf">RFC 1253: OSPF Version 2 Management Information Base</a>
           </td>
           <td>August 1991</td>
           <td>
