@@ -33,6 +33,7 @@ html {
 
 .bg-image {
   background-image: url("https://www.ospf.sk/img/background-4k-300dpi.png");
+  background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
